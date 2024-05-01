@@ -1,15 +1,15 @@
-import clsx from "clsx";
+import clsx from 'clsx'
 
 export default function AttendantIcon({
-  color = "white",
-  lineWidth = "3",
+  color = 'currentColor', // inherit parent container text color by default
+  lineWidth = '3',
   size = 16,
   className,
   ...props
 }) {
   return (
     <svg
-	{...props}
+      {...props}
       className={clsx(className)}
       width={size}
       height={size}
@@ -32,5 +32,5 @@ export default function AttendantIcon({
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }

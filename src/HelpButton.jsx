@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../tailwind-config'
 import clsx from 'clsx'
-import AttendantIcon from './AttendantIcon'
 
-const fullConfig = resolveConfig(JSON.parse(tailwindConfig))
-
-export default function HelpButton({ onActivated = undefined }) {
+export default function HelpButton({
+  onActivated = undefined,
+  label = 'Get help',
+  leftIcon,
+  rightIcon,
+  className,
+}) {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -30,7 +31,8 @@ export default function HelpButton({ onActivated = undefined }) {
       className={clsx(
         active ? 'translate-y-[2px] text-amber-100' : 'text-white',
         'relative flex items-center gap-2 rounded-full p-4 px-6',
-        'font-semibold transition-all duration-200 active:translate-y-[2px] max-w-fit',
+        'max-w-fit font-semibold transition-all duration-200 active:translate-y-[2px]',
+        className,
       )}
     >
       <div
@@ -41,12 +43,9 @@ export default function HelpButton({ onActivated = undefined }) {
           'absolute inset-0 -z-10 rounded-full bg-gradient-to-b transition-all duration-300',
         )}
       />
-      <AttendantIcon
-        size={24}
-        lineWidth="4"
-        color={active ? fullConfig.theme.colors.amber['100'] : 'white'}
-      />
-      <span>Call moderator</span>
+      {leftIcon}
+      {label}
+      {rightIcon}
     </button>
   )
 }
