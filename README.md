@@ -1,8 +1,5 @@
-# React + Vite
+# Flight attentant button component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Just a quick, silly 1 hour project - a simple button component with a built in airplane chime and a nice glow animation.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Click to get your ding dong on 🛎️](https://jakub-sekula.github.io/ding/).
