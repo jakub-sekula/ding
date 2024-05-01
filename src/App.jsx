@@ -16,7 +16,7 @@ export default function App() {
 
   useEffect(() => {
     if (active) {
-      const newAudio = new Audio("/ding.mp3");
+      const newAudio = new Audio("ding.mp3");
       newAudio.play();
     }
   }, [active]);
