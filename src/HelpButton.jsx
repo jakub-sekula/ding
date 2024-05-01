@@ -38,7 +38,7 @@ export default function HelpButton({
       <div
         className={clsx(
           active
-            ? 'animate-pulse-fast from-orange-400 to-orange-500 shadow-orange-glow-light'
+            ? 'animate-pulse-fast from-orange-400 to-orange-500 shadow-orange-glow-light dark:shadow-orange-glow-dark'
             : ' from-slate-500 to-slate-600',
           'absolute inset-0 -z-10 rounded-full bg-gradient-to-b transition-all duration-300',
         )}
